@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Radar de Editais - ESG, Comunicação, RI e DE&I</title>
+<style>
+  :root {
+    --bg: #0f1419;
+    --card: #1a1f2e;
+    --border: #2a3142;
+    --text: #e6e8eb;
+    --muted: #9098a8;
+    --accent: #4f9eff;
+    --esg: #4ade80;
+    --com: #f59e0b;
+    --ri: #a78bfa;
+    --dei: #f472b6;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 24px;
+    line-height: 1.5;
+  }
+  header {
+    max-width: 1200px;
+    margin: 0 auto 24px;
+  }
+  h1 { font-size: 24px; margin: 0 0 4px; }
+  .subtitle { color: var(--muted); font-size: 14px; margin-bottom: 16px; }
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 16px 0;
+  }
+  .filter-btn {
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.15s;
+  }
+  .filter-btn:hover { border-color: var(--accent); }
+  .filter-btn.active { background: var(--accent); border-color: var(--accent); }
+  .container { max-width: 1200px; margin: 0 auto; }
+  .section-title {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--muted);
+    margin: 24px 0 12px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+  }
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+  .card-title {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0;
+  }
+  .card-title a { color: var(--text); text-decoration: none; }
+  .card-title a:hover { color: var(--accent); text-decoration: underline; }
+  .tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+  }
+  .tag.esg { background: rgba(74, 222, 128, 0.15); color: var(--esg); }
+  .tag.com { background: rgba(245, 158, 11, 0.15); color: var(--com); }
+  .tag.ri { background: rgba(167, 139, 250, 0.15); color: var(--ri); }
+  .tag.dei { background: rgba(244, 114, 182, 0.15); color: var(--dei); }
+  .meta { color: var(--muted); font-size: 13px; margin: 4px 0; }
+  .meta strong { color: var(--text); }
+  .card-desc { font-size: 14px; color: #c8ccd4; margin: 8px 0 0; }
+  .empty {
+    text-align: center;
+    color: var(--muted);
+    padding: 40px;
+    background: var(--card);
+    border-radius: 8px;
+    border: 1px dashed var(--border);
+  }
+  footer {
+    max-width: 1200px;
+    margin: 32px auto 0;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 12px;
+  }
+  .portals {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 8px;
+    margin-top: 8px;
+  }
+  .portal-link {
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 10px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    display: block;
+  }
+  .portal-link:hover { border-color: var(--accent); }
+  .portal-link small { color: var(--muted); display: block; margin-top: 2px; }
+</style>
+</head>
+<body>
+<header class="container">
+  <h1>Radar de Editais — ESG, Comunicação, RI e DE&I</h1>
+  <div class="subtitle" id="last-update">Última atualização: 8 de julho de 2026</div>
+  <div class="filters" id="filters">
+    <button class="filter-btn active" data-filter="all">Todos</button>
+    <button class="filter-btn" data-filter="esg">ESG & Sustentabilidade</button>
+    <button class="filter-btn" data-filter="com">Comunicação</button>
+    <button class="filter-btn" data-filter="ri">Rel. Institucionais</button>
+    <button class="filter-btn" data-filter="dei">DE&I & Impacto Social</button>
+  </div>
+</header>
+
+<main class="container">
+  <div class="section-title">Editais e oportunidades ativas</div>
+  <div id="editais">
+
+    <div class="card" data-cat="com">
+      <div class="card-header">
+        <h3 class="card-title"><a href="https://www.comunicacao.sp.gov.br/secom/transpar%C3%AAncia/licita%C3%A7%C3%B5es" target="_blank">Concorrência 03/2026 — Comunicação Corporativa Integrada (Meio Ambiente, Infraestrutura e Logística)</a></h3>
+        <span class="tag com">Comunicação</span>
+      </div>
+      <div class="meta"><strong>Órgão:</strong> SECOM São Paulo</div>
+      <div class="meta"><strong>Escopo:</strong> Serviços integrados de comunicação corporativa para as áreas de Meio Ambiente, Infraestrutura e Logística do Governo de SP</div>
+      <div class="meta"><strong>Fonte:</strong> Portal de licitações SECOM SP</div>
+    </div>
+
+    <div class="card" data-cat="com">
+      <div class="card-header">
+        <h3 class="card-title"><a href="https://www.comunicacao.sp.gov.br/secom/transpar%C3%AAncia/licita%C3%A7%C3%B5es" target="_blank">Concorrência 04/2026 — Comunicação Corporativa Integrada (Casa Civil)</a></h3>
+        <span class="tag com">Comunicação</span>
+      </div>
+      <div class="meta"><strong>Órgão:</strong> SECOM São Paulo</div>
+      <div class="meta"><strong>Escopo:</strong> Comunicação institucional integrada para a Casa Civil</div>
+      <div class="meta"><strong>Fonte:</strong> Portal de licitações SECOM SP</div>
+    </div>
+
+    <div class="card" data-cat="ri">
+      <div class="card-header">
+        <h3 class="card-title"><a href="https://www.gov.br/mdh/pt-br/navegue-por-temas/cooperacao-internacional/editais-2026" target="_blank">Edital 03/2026 — Consultoria para Conselhos Tutelares (SIPIA-CT)</a></h3>
+        <span class="tag ri">Rel. Institucionais</span>
+      </div>
+      <div class="meta"><strong>Órgão:</strong> Ministério dos Direitos Humanos e da Cidadania</div>
+      <div class="meta"><strong>Escopo:</strong> Consultoria PF para levantamento nacional dos Conselhos Tutelares — infraestrutura, condições de trabalho e relações institucionais com o Executivo Municipal</div>
+      <div class="meta"><strong>Modalidade:</strong> Cooperação internacional</div>
+    </div>
+
+    <div class="card" data-cat="ri">
+      <div class="card-header">
+        <h3 class="card-title"><a href="https://www.gov.br/mdh/pt-br/navegue-por-temas/cooperacao-internacional/editais-2026" target="_blank">Edital 02/2026 — Consultoria Técnico-Científica sobre Conselhos Tutelares</a></h3>
+        <span class="tag ri">Rel. Institucionais</span>
+      </div>
+      <div class="meta"><strong>Órgão:</strong> Ministério dos Direitos Humanos e da Cidadania</div>
+      <div class="meta"><strong>Escopo:</strong> Estudo técnico-científico sobre a atuação dos Conselhos Tutelares e uso do SIPIA-CT</div>
+      <div class="meta"><strong>Modalidade:</strong> Consultoria PF</div>
+    </div>
+
+    <div class="card" data-cat="dei">
+      <div class="card-header">
+        <h3 class="card-title"><a href="https://conjunta.org/recurso-financeiro/edital-continuo-de-apoio-a-projetos-sociais-ciclo-2026-instituto-impactarte/" target="_blank">Edital Contínuo de Apoio a Projetos Sociais — Ciclo 2026</a></h3>
+        <span class="tag dei">DE&I / Impacto Social</span>
+      </div>
+      <div class="meta"><strong>Instituição:</strong> Instituto Impactarte</div>
+      <div class="meta"><strong>Escopo:</strong> Aporte direto (sem incentivo fiscal) + suporte não-financeiro para iniciativas de impacto social ao longo de 2026</div>
+      <div class="meta"><strong>Inscrições:</strong> Contínuas</div>
+    </div>
+
+    <div class="card" data-cat="dei">
+      <div class="card-header">
+        <h3 class="card-title"><a href="https://mgnconsultoria.com.br/projetos/edital-orgulho-delas-diversidade-e-inclusao/" target="_blank">Edital Orgulho Delas — Diversidade e Inclusão</a></h3>
+        <span class="tag dei">DE&I / Impacto Social</span>
+      </div>
+      <div class="meta"><strong>Escopo:</strong> Apoio a grupos e coletivos de mulheres LGBTQIAPN+</div>
+      <div class="meta"><strong>Valor:</strong> Até R$ 50.000 por grupo selecionado (5 grupos)</div>
+    </div>
+
+    <div class="card" data-cat="esg">
+      <div class="card-header">
+        <h3 class="card-title">Contexto regulatório — CVM 193/2023 (IFRS S1/S2)</h3>
+        <span class="tag esg">ESG</span>
+      </div>
+      <div class="meta"><strong>Oportunidade:</strong> IFRS de Sustentabilidade obrigatórias a partir de 01/01/2026 gerando demanda em relatórios GRI, dupla materialidade, inventário GEE</div>
+      <div class="meta"><strong>Setores:</strong> Empresas de capital aberto, seguradoras, cooperativas</div>
+      <div class="meta">Monitore os portais abaixo para editais específicos.</div>
+    </div>
+
+  </div>
+
+  <div class="section-title">Portais públicos e agregadores</div>
+  <div class="portals">
+    <a class="portal-link" href="https://pncp.gov.br/app/editais" target="_blank">PNCP — Portal Nacional de Contratações Públicas<small>Editais federais, estaduais e municipais</small></a>
+    <a class="portal-link" href="https://www.comprasnet.gov.br" target="_blank">ComprasNet<small>Licitações federais</small></a>
+    <a class="portal-link" href="https://www.sigapregao.com.br/app/4/licitacoes/consultoria-e-assessoria--comunicacao" target="_blank">SIGA Pregão<small>Agregador de licitações</small></a>
+    <a class="portal-link" href="https://www.licitaja.com.br" target="_blank">LicitaJá<small>Editais de comunicação, marketing digital</small></a>
+    <a class="portal-link" href="https://alertalicitacao.com.br/!cnae/1068" target="_blank">AlertaLicitação<small>CNAE de consultoria empresarial</small></a>
+    <a class="portal-link" href="https://www.gov.br/gestao/pt-br/acesso-a-informacao/transparencia-e-prestacao-de-contas/vagas-de-consultoria" target="_blank">MGI — Vagas de Consultoria<small>Consultoria para o setor público federal</small></a>
+    <a class="portal-link" href="https://www.gov.br/mdh/pt-br/navegue-por-temas/cooperacao-internacional/editais-2026" target="_blank">MDHC — Editais 2026<small>Direitos Humanos, DE&I</small></a>
+    <a class="portal-link" href="https://conjunta.org" target="_blank">Plataforma Conjunta<small>Editais de investimento social privado</small></a>
+  </div>
+
+  <div class="section-title">ONGs, institutos e organismos internacionais</div>
+  <div class="portals">
+    <a class="portal-link" href="https://socioambiental.org/vagas-e-editais" target="_blank">ISA — Vagas e Editais<small>Instituto Socioambiental (socioambiental, indígenas, Amazônia)</small></a>
+    <a class="portal-link" href="https://movimentopelabase.org.br/" target="_blank">Movimento pela Base<small>Educação, BNCC, comunicação institucional</small></a>
+    <a class="portal-link" href="https://www.radaresg.com.br/" target="_blank">Radar ESG<small>Consultoria e monitoramento ESG</small></a>
+    <a class="portal-link" href="https://themis.org.br/tag/edital/" target="_blank">Themis — Editais<small>Gênero, justiça e DH (seleção@themis.org.br)</small></a>
+    <a class="portal-link" href="https://brazil.unfpa.org/pt-br/vacancies" target="_blank">UNFPA Brasil — Vacancies<small>Consultorias PF do Fundo de População da ONU</small></a>
+    <a class="portal-link" href="https://www.unfpa.org/unfpa-consultant-roster" target="_blank">UNFPA — Consultant Roster<small>Cadastro global de consultores</small></a>
+    <a class="portal-link" href="https://www.ungm.org/public/notice" target="_blank">UNGM — Procurement Notices<small>Portal de compras da ONU (ITB, RFP, RFQ, EOI)</small></a>
+    <a class="portal-link" href="https://www.wribrasil.org.br/trabalhe-conosco" target="_blank">WRI Brasil — Trabalhe conosco<small>Clima, natureza, cidades resilientes</small></a>
+  </div>
+
+  <div class="section-title">LinkedIn (busca segmentada)</div>
+  <div class="portals">
+    <a class="portal-link" href="https://www.linkedin.com/search/results/content/?keywords=edital%20consultoria%20ESG&datePosted=%22past-24h%22" target="_blank">LinkedIn — Posts "edital consultoria ESG" (24h)<small>Feed de posts recentes</small></a>
+    <a class="portal-link" href="https://www.linkedin.com/search/results/content/?keywords=edital%20consultoria%20comunica%C3%A7%C3%A3o&datePosted=%22past-24h%22" target="_blank">LinkedIn — Posts "consultoria comunicação" (24h)<small>Feed de posts recentes</small></a>
+    <a class="portal-link" href="https://www.linkedin.com/jobs/search/?keywords=consultoria%20ESG%20sustentabilidade&f_TPR=r86400" target="_blank">LinkedIn Jobs — ESG/Sustentabilidade<small>Vagas nas últimas 24h</small></a>
+    <a class="portal-link" href="https://www.linkedin.com/jobs/search/?keywords=RFP%20consultoria&f_TPR=r86400" target="_blank">LinkedIn Jobs — RFP consultoria<small>Vagas nas últimas 24h</small></a>
+  </div>
+</main>
+
+<footer class="container">
+  Radar atualizado diariamente às 8h por tarefa agendada. Última atualização: <span id="last-update-footer">8 de julho de 2026</span>.<br>
+  Termos monitorados: ESG, sustentabilidade, GRI, dupla materialidade, comunicação corporativa, assessoria de imprensa, relações institucionais, advocacy, DE&I, diversidade e inclusão, investimento social privado.
+</footer>
+
+<script>
+  const buttons = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('#editais .card');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      cards.forEach(card => {
+        card.style.display = (filter === 'all' || card.dataset.cat === filter) ? '' : 'none';
+      });
+    });
+  });
+</script>
+</body>
+</html>
