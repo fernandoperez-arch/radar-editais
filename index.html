@@ -94,6 +94,20 @@
   .meta { color: var(--muted); font-size: 13px; margin: 4px 0; }
   .meta strong { color: var(--text); }
   .card-desc { font-size: 14px; color: #c8ccd4; margin: 8px 0 0; }
+  .tdr-link {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 6px 12px;
+    background: rgba(79, 158, 255, 0.15);
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 4px;
+    border: 1px solid rgba(79, 158, 255, 0.3);
+  }
+  .tdr-link:hover { background: rgba(79, 158, 255, 0.25); }
+  .tdr-fallback { color: var(--muted); font-size: 12px; margin-top: 6px; font-style: italic; }
   .empty {
     text-align: center;
     color: var(--muted);
@@ -149,61 +163,70 @@
 
     <div class="card" data-cat="com">
       <div class="card-header">
-        <h3 class="card-title"><a href="https://www.comunicacao.sp.gov.br/secom/transpar%C3%AAncia/licita%C3%A7%C3%B5es" target="_blank">Concorrência 03/2026 — Comunicação Corporativa Integrada (Meio Ambiente, Infraestrutura e Logística)</a></h3>
+        <h3 class="card-title">Concorrência 03/2026 — Comunicação Corporativa Integrada (Meio Ambiente, Infraestrutura e Logística)</h3>
         <span class="tag com">Comunicação</span>
       </div>
       <div class="meta"><strong>Órgão:</strong> SECOM São Paulo</div>
       <div class="meta"><strong>Escopo:</strong> Serviços integrados de comunicação corporativa para as áreas de Meio Ambiente, Infraestrutura e Logística do Governo de SP</div>
-      <div class="meta"><strong>Fonte:</strong> Portal de licitações SECOM SP</div>
+      <a class="tdr-link" href="https://www.comunicacao.sp.gov.br/secom/transpar%C3%AAncia/licita%C3%A7%C3%B5es" target="_blank">Ver edital e TdR no portal SECOM SP →</a>
+      <div class="tdr-fallback">TdR publicado na página de licitações — busque por "Concorrência 03/2026"</div>
     </div>
 
     <div class="card" data-cat="com">
       <div class="card-header">
-        <h3 class="card-title"><a href="https://www.comunicacao.sp.gov.br/secom/transpar%C3%AAncia/licita%C3%A7%C3%B5es" target="_blank">Concorrência 04/2026 — Comunicação Corporativa Integrada (Casa Civil)</a></h3>
+        <h3 class="card-title">Concorrência 04/2026 — Comunicação Corporativa Integrada (Casa Civil)</h3>
         <span class="tag com">Comunicação</span>
       </div>
       <div class="meta"><strong>Órgão:</strong> SECOM São Paulo</div>
       <div class="meta"><strong>Escopo:</strong> Comunicação institucional integrada para a Casa Civil</div>
-      <div class="meta"><strong>Fonte:</strong> Portal de licitações SECOM SP</div>
+      <a class="tdr-link" href="https://www.comunicacao.sp.gov.br/secom/transpar%C3%AAncia/licita%C3%A7%C3%B5es" target="_blank">Ver edital e TdR no portal SECOM SP →</a>
+      <div class="tdr-fallback">TdR publicado na página de licitações — busque por "Concorrência 04/2026"</div>
     </div>
 
     <div class="card" data-cat="ri">
       <div class="card-header">
-        <h3 class="card-title"><a href="https://www.gov.br/mdh/pt-br/navegue-por-temas/cooperacao-internacional/editais-2026" target="_blank">Edital 03/2026 — Consultoria para Conselhos Tutelares (SIPIA-CT)</a></h3>
+        <h3 class="card-title">Edital 03/2026 — Consultoria PF para Conselhos Tutelares (SIPIA-CT)</h3>
         <span class="tag ri">Rel. Institucionais</span>
       </div>
-      <div class="meta"><strong>Órgão:</strong> Ministério dos Direitos Humanos e da Cidadania</div>
-      <div class="meta"><strong>Escopo:</strong> Consultoria PF para levantamento nacional dos Conselhos Tutelares — infraestrutura, condições de trabalho e relações institucionais com o Executivo Municipal</div>
-      <div class="meta"><strong>Modalidade:</strong> Cooperação internacional</div>
+      <div class="meta"><strong>Órgão:</strong> Ministério dos Direitos Humanos e da Cidadania (MDHC) — cooperação internacional</div>
+      <div class="meta"><strong>Escopo:</strong> Levantamento nacional dos Conselhos Tutelares (infraestrutura, territorialidade, condições de trabalho, relações institucionais com o Executivo Municipal). 4 entregáveis, 360 dias.</div>
+      <div class="meta"><strong>Valor:</strong> R$ 153.000 (total)</div>
+      <div class="meta"><strong>Requisitos:</strong> Graduação em Ciências Sociais + Mestrado em Saúde Pública, Políticas Públicas ou áreas correlatas</div>
+      <a class="tdr-link" href="https://www.gov.br/mdh/pt-br/navegue-por-temas/cooperacao-internacional/editais-2026" target="_blank">Ver TdR completo (MDHC Editais 2026) →</a>
     </div>
 
     <div class="card" data-cat="ri">
       <div class="card-header">
-        <h3 class="card-title"><a href="https://www.gov.br/mdh/pt-br/navegue-por-temas/cooperacao-internacional/editais-2026" target="_blank">Edital 02/2026 — Consultoria Técnico-Científica sobre Conselhos Tutelares</a></h3>
+        <h3 class="card-title">Edital 02/2026 — Consultoria Técnico-Científica sobre Conselhos Tutelares</h3>
         <span class="tag ri">Rel. Institucionais</span>
       </div>
-      <div class="meta"><strong>Órgão:</strong> Ministério dos Direitos Humanos e da Cidadania</div>
+      <div class="meta"><strong>Órgão:</strong> Ministério dos Direitos Humanos e da Cidadania (MDHC)</div>
       <div class="meta"><strong>Escopo:</strong> Estudo técnico-científico sobre a atuação dos Conselhos Tutelares e uso do SIPIA-CT</div>
       <div class="meta"><strong>Modalidade:</strong> Consultoria PF</div>
+      <a class="tdr-link" href="https://www.gov.br/mdh/pt-br/navegue-por-temas/cooperacao-internacional/editais-2026" target="_blank">Ver TdR completo (MDHC Editais 2026) →</a>
     </div>
 
     <div class="card" data-cat="dei">
       <div class="card-header">
-        <h3 class="card-title"><a href="https://conjunta.org/recurso-financeiro/edital-continuo-de-apoio-a-projetos-sociais-ciclo-2026-instituto-impactarte/" target="_blank">Edital Contínuo de Apoio a Projetos Sociais — Ciclo 2026</a></h3>
+        <h3 class="card-title">Edital Contínuo de Apoio a Projetos Sociais — Ciclo 2026</h3>
         <span class="tag dei">DE&I / Impacto Social</span>
       </div>
       <div class="meta"><strong>Instituição:</strong> Instituto Impactarte</div>
       <div class="meta"><strong>Escopo:</strong> Aporte direto (sem incentivo fiscal) + suporte não-financeiro para iniciativas de impacto social ao longo de 2026</div>
-      <div class="meta"><strong>Inscrições:</strong> Contínuas</div>
+      <div class="meta"><strong>Público-alvo:</strong> OSCs (associações e fundações), produtores culturais, iniciativas socioculturais formalmente constituídas</div>
+      <div class="meta"><strong>Inscrições:</strong> Contínuas ao longo de 2026</div>
+      <a class="tdr-link" href="https://conjunta.org/recurso-financeiro/edital-continuo-de-apoio-a-projetos-sociais-ciclo-2026-instituto-impactarte/" target="_blank">Ver TdR na Plataforma Conjunta →</a>
     </div>
 
     <div class="card" data-cat="dei">
       <div class="card-header">
-        <h3 class="card-title"><a href="https://mgnconsultoria.com.br/projetos/edital-orgulho-delas-diversidade-e-inclusao/" target="_blank">Edital Orgulho Delas — Diversidade e Inclusão</a></h3>
+        <h3 class="card-title">Edital Orgulho Delas — Diversidade e Inclusão</h3>
         <span class="tag dei">DE&I / Impacto Social</span>
       </div>
       <div class="meta"><strong>Escopo:</strong> Apoio a grupos e coletivos de mulheres LGBTQIAPN+</div>
       <div class="meta"><strong>Valor:</strong> Até R$ 50.000 por grupo selecionado (5 grupos)</div>
+      <a class="tdr-link" href="https://mgnconsultoria.com.br/projetos/edital-orgulho-delas-diversidade-e-inclusao/" target="_blank">Ver detalhes do edital →</a>
+      <div class="tdr-fallback">TdR e formulário de inscrição via página do projeto</div>
     </div>
 
     <div class="card" data-cat="esg">
@@ -211,9 +234,9 @@
         <h3 class="card-title">Contexto regulatório — CVM 193/2023 (IFRS S1/S2)</h3>
         <span class="tag esg">ESG</span>
       </div>
-      <div class="meta"><strong>Oportunidade:</strong> IFRS de Sustentabilidade obrigatórias a partir de 01/01/2026 gerando demanda em relatórios GRI, dupla materialidade, inventário GEE</div>
+      <div class="meta"><strong>Oportunidade:</strong> IFRS de Sustentabilidade obrigatórias a partir de 01/01/2026 — demanda em relatórios GRI, dupla materialidade, inventário GEE</div>
       <div class="meta"><strong>Setores:</strong> Empresas de capital aberto, seguradoras, cooperativas</div>
-      <div class="meta">Monitore os portais abaixo para editais específicos.</div>
+      <div class="tdr-fallback">Monitore os portais abaixo para editais específicos com TdR publicado.</div>
     </div>
 
   </div>
